@@ -1,0 +1,108 @@
+getgenv().Setting = {
+    ["Team"] = "Pirates", --Marines,Pirates
+    ["Webhook"] = {
+        ["Enabled"] = true,
+        ["Url Webhook"] = "", --Your Url
+    },
+    ["Misc"] = {
+        ["AutoBuyRandomandStoreFruit"] = true,
+        ["AutoBuySurprise"] = false,
+    },
+    ["Click"] = {
+        ["Enable"] = true,
+        ["Click Gun"] = true,
+        ["OnLowHealthDisable"] = true,
+        ["LowHealth"] = 4500,
+    },
+    ["SafeZone"] = {
+        ["Enable"] = true,
+        ["LowHealth"] = 4500, -- safe, risk put 3000 but faster hunt
+        ["MaxHealth"] = 5000, -- risk, set 8000 for safe but slower hunt
+        ["Teleport Y"] = 2000
+    },
+    ["Race V4"] = {
+        ["Enable"] = true, -- Recommend use Rabbit (aka Mink Race)
+    },
+    ["Invisible"] = false,  -- no working dont use kid
+    ["White Screen"] = false, -- tuy` nguoi sai` nhe'
+    ["GunMethod"] = false, -- Bật On Gun + Melee (có thể dùng sw / df)
+    ["SpamSkill"] = false, -- hieu don gian la` no bam vo toi va. ko can hold j het
+    ["Weapons"] = {
+        ["Melee"] = {
+            ["Enable"] = true,
+            ["Delay"] = 3, -- ( delay 2-3 is alright )
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 1.5, -- Skid ngu dung skid
+                },
+               [ "X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0.1, -- Config By Hkoaa
+                },
+
+                ["C"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0.1,
+                },
+            },
+        },
+        ["Blox Fruit"] = {
+            ["Enable"] = true, -- (Kitsune / Magma and Venom is the best choice)
+            ["Delay"] = 3, -- (0-2 delay is alright)
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true, -- hold 1.5 if magma / venom (0 for kitsune)
+                    ["HoldTime"] = 1.5,
+                },
+                ["X"] = {
+                    ["Enable"] = true, -- Config By Hkoaa 
+                    ["HoldTime"] = 0,
+                },
+
+                ["C"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["V"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0,
+                },
+                ["F"] = {
+                    ["Enable"] = false, -- (only turn if using venom)
+                    ["HoldTime"] = 0,
+                },
+            },
+        },
+        ["Gun"] = {
+            ["Enable"] = false, -- recommend acid / serpent bow (kabucha is good tho but i dont think so..)
+            ["Delay"] = 2, -- ( 2-3.7 delay is alright )
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = false,
+                    ["HoldTime"] = 0.7, -- 0.3 for serpent bow and acid
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0.7, -- 0 for serpent bow and acid
+                },
+            },
+        },
+        ["Sword"] = {
+            ["Enable"] = false,
+            ["Delay"] = 1, -- (1-3 delay is alright) 
+            ["Skills"] = {
+                ["Z"] = {
+                    ["Enable"] = true, -- (CDK/Shark Anhchor/Buddy/Dragon Trident is the best choice)
+                    ["HoldTime"] = 0.2, -- Only for CDK and Shark Anchor (Hold 0.2 For Buddy and 0 for Dragon Trident)
+                },
+                ["X"] = {
+                    ["Enable"] = true,
+                    ["HoldTime"] = 0, -- Config By Hkoaa 
+                },
+            },
+        },
+    }
+}
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BountyShit.lua"))()
